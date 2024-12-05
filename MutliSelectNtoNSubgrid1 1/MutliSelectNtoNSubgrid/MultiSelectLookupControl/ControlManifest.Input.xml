@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+	<control namespace="EDPB2C" constructor="MultiSelectLookupControl" version="2.1.0" display-name-key="MultiSelectLookupControl" description-key="MultiSelectLookupControl description" control-type="standard" >
+		<external-service-usage enabled="false">
+		</external-service-usage>
+		<data-set name="records" display-name-key="Records Grid">
+		</data-set>
+		<property name="controlImageURl" display-name-key="Control Image URl" description-key="Control Image URl" of-type="SingleLine.Text" usage="input" required="true"/>
+		<property name="filterByField" display-name-key="Field Logical Name" description-key="Field Logical Name" of-type="SingleLine.Text" usage="input" required="false"/>
+		<property name="conditionAttribute" display-name-key="Condition Attribute" description-key="Condition Attribute" of-type="SingleLine.Text" usage="input" required="false"/>
+		<property name="allowEmptyFilter" display-name-key="Allow Empty Filter?" description-key="Allow Empty Filter" of-type="Enum" usage="input" default-value="True" required="false">
+			<value name="True" display-name-key="True" description-key="True">True</value>
+			<value name="False" display-name-key="False" description-key="False">False</value>
+		</property>
+		<resources>
+			<code path="index.ts" order="1"/>
+			<css path="MultiSelectLookup.module.css" order="1" />
+		</resources>
+		<feature-usage>
+			<uses-feature name="Device.captureAudio" required="true" />
+			<uses-feature name="Device.captureImage" required="true" />
+			<uses-feature name="Device.captureVideo" required="true" />
+			<uses-feature name="Device.getBarcodeValue" required="true" />
+			<uses-feature name="Device.getCurrentPosition" required="true" />
+			<uses-feature name="Device.pickFile" required="true" />
+			<uses-feature name="Utility" required="true" />
+			<uses-feature name="WebAPI" required="true" />
+		</feature-usage>
+	</control>
+</manifest>

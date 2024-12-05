@@ -1,0 +1,93 @@
+.multiSelectLookup {
+    display: flex;
+    align-items: center;
+}
+
+.multiSelectLookup .divSearch {
+    position: fixed;
+    width: 20px;
+    height: 16.8px;
+    right: 29px;
+    text-align: right;
+    content: "\E721";
+    cursor: pointer;
+    color: rgb(97, 97, 97);
+}
+
+    .multiSelectLookup .divSearch:hover {
+        color: rgb(15, 108, 189);
+    }
+
+.lookupObjectListing {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    padding: 5px;
+    border: 1px transparent;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    min-height: 22px;
+    max-height: 80px;
+    overflow-y: auto;
+}
+
+    .lookupObjectListing::-webkit-scrollbar {
+        width: 6px; /* Reduzindo a largura da barra de rolagem para ficar mais fina */
+        height: 6px; /* Reduzindo a altura do scroll horizontal, se houver */
+    }
+
+    .lookupObjectListing::-webkit-scrollbar-thumb {
+        background-color: #c1c1c1; /* Cor similar ao scroll do CRM, um cinza claro */
+        border-radius: 4px; /* Cantos levemente arredondados */
+    }
+
+    .lookupObjectListing::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* Fundo mais claro para o track da barra */
+    }
+
+.lookupObjectListing-item {
+    transition: background-color 50ms;
+    background-color: rgb(235, 243, 252);
+    display: flex;
+    align-items: center;
+    max-width: calc(100% - 28px);
+    white-space: nowrap;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color: rgb(17, 94, 163);
+    border-radius: 4px;
+    height: 22px;
+}
+
+    .lookupObjectListing-item img {
+        margin-right: 3px;
+        width: 16px;
+        height: 16px;
+        padding: 0px 5px;
+    }
+
+    .lookupObjectListing-item a {
+        color: rgb(17, 94, 163);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .lookupObjectListing-item:hover {
+        background-color: rgb(207, 228, 250);
+    }
+
+    .lookupObjectListing-item .deleticon {
+        width: 10px;
+        height: 10px;
+        z-index: 1;
+        padding: 0px 7px;
+        cursor: pointer;
+        display: flex;
+    }
+
+        .lookupObjectListing-item .deleticon svg {
+            fill: rgb(17, 94, 163);
+            width: 10px;
+            height: 10px;
+        }
